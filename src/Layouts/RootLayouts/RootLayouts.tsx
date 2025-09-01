@@ -7,8 +7,6 @@ const RootLayouts = () => {
     return (
         <div className="flex flex-col min-h-screen">
             <Navbar />
-
-            {/* Main content area with top padding for fixed navbar */}
             <main className="flex-1 bg-gray-50">
                 <div className="">
                     <Outlet />
