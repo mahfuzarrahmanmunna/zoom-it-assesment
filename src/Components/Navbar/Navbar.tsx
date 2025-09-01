@@ -30,7 +30,9 @@ const Navbar: React.FC = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md" : "bg-transparent"
+        isScrolled
+          ? "bg-white/20 backdrop-blur-md shadow-lg border-b border-white/10"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
@@ -39,7 +41,11 @@ const Navbar: React.FC = () => {
           to="/"
           className="text-2xl font-bold tracking-tight text-blue-600"
         >
-          <img src="https://i.ibb.co.com/LX6YJr11/logo1.png" className="w-36" alt="" />
+          <img
+            src="https://i.ibb.co.com/23kWpy0M/Chat-GPT-Image-Sep-2-2025-12-41-09-AM.png"
+            className="w-36"
+            alt="ZoomMart Logo"
+          />
         </NavLink>
 
         {/* Desktop Nav */}
@@ -52,7 +58,7 @@ const Navbar: React.FC = () => {
                 `${
                   isActive
                     ? "text-blue-600 font-semibold underline underline-offset-4"
-                    : "text-gray-700"
+                    : "text-gray-200"
                 } ${linkClasses}`
               }
             >
@@ -73,7 +79,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Dropdown */}
       <div
-        className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden bg-white shadow-sm ${
+        className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden bg-white/90 backdrop-blur-md shadow-sm ${
           isOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
@@ -86,7 +92,7 @@ const Navbar: React.FC = () => {
                 `${
                   isActive
                     ? "text-blue-600 font-semibold underline underline-offset-4"
-                    : "text-gray-700"
+                    : "text-gray-800"
                 } ${linkClasses}`
               }
               onClick={() => setIsOpen(false)}
